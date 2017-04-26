@@ -24,3 +24,18 @@ class spil:
         print("Frjósemi:",self.frjo)
         print("Gerð/þykkt bakvöðva:",self.bak)
         print("Einkunn malir:",self.malir)
+ollspil=[]
+with open("spil.txt","w") as f:
+    for a in range(52):
+        nafn = f.readline()
+        thyngd = f.readline()
+        mjolk = f.readline()
+        ull = f.readline()
+        born = f.readline()
+        laeri = f.readline()
+        frjo = f.readline()
+        bak = f.readline()
+        malir = f.readline()
+        f.readline()
+        hrutur = spil(nafn,thyngd,mjolk,ull,born,laeri,frjo,bak,malir)
+        ollspil.append(hrutur)
