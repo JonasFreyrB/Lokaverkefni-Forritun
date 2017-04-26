@@ -25,17 +25,21 @@ class spil:
         print("Gerð/þykkt bakvöðva:",self.bak)
         print("Einkunn malir:",self.malir)
 ollspil=[]
-with open("spil.txt","w") as f:
-    for a in range(52):
+with open("spil.txt","r") as f:
+    for a in range(3):
         nafn = f.readline()
-        thyngd = f.readline()
-        mjolk = f.readline()
-        ull = f.readline()
-        born = f.readline()
-        laeri = f.readline()
-        frjo = f.readline()
-        bak = f.readline()
-        malir = f.readline()
+        thyngd = eval(f.readline())
+        mjolk = eval(f.readline())
+        ull = eval(f.readline())
+        born = eval(f.readline())
+        laeri = eval(f.readline())
+        frjo = eval(f.readline())
+        bak = eval(f.readline())
+        malir = eval(f.readline())
         f.readline()
         hrutur = spil(nafn,thyngd,mjolk,ull,born,laeri,frjo,bak,malir)
         ollspil.append(hrutur)
+print(ollspil)
+for a in ollspil:
+    a.lysing()
+    print("---")
