@@ -25,7 +25,7 @@ class spil:
         print("Gerð/þykkt bakvöðva:",self.bak)
         print("Einkunn malir:",self.malir)
 ollspil=[]
-with open("spil.txt","r",encoding = 'utf-8') as f:
+with open("spil.txt","r") as f:
     for a in range(52):
         nafn = eval(f.readline())
         thyngd = eval(f.readline())
